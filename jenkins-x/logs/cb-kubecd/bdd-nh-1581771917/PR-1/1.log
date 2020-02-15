@@ -1,0 +1,136 @@
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ptnqr[0m
+{"level":"warn","ts":1581772930.3044608,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581772930.304777,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-srdgj[0m
+{"level":"warn","ts":1581772931.3842711,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581772931.3851714,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-nh-1581771917-pr-2hwrv-w9mz8[0m
+{"level":"warn","ts":1581772951.4918993,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581772951.6527762,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-nh-1581771917.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:34b81e311c57516ccb20025db52cb13d99f0f2af,1:7e201a0bb3d9d3c2edebd3f36346ef7fd92fd5bf
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 7e201a0bb3d9d3c2edebd3f36346ef7fd92fd5bf: 34b81e311c57516ccb20025db52cb13d99f0f2af:
+DEBUG: ran git fetch --unshallow origin 7e201a0bb3d9d3c2edebd3f36346ef7fd92fd5bf: 34b81e311c57516ccb20025db52cb13d99f0f2af: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 34b81e311c57516ccb20025db52cb13d99f0f2af
+DEBUG: ran git reset --hard 34b81e311c57516ccb20025db52cb13d99f0f2af in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 7e201a0bb3d9d3c2edebd3f36346ef7fd92fd5bf
+DEBUG: ran git merge 7e201a0bb3d9d3c2edebd3f36346ef7fd92fd5bf in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 34b81e311c57516ccb20025db52cb13d99f0f2af..HEAD
+Merged SHA 7e201a0bb3d9d3c2edebd3f36346ef7fd92fd5bf with commit message 'My first PR commit' into base branch master
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.221s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+2020/02/15 13:22:35 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+2020/02/15 13:22:35 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Executing 0 build triggers                   
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] ENV PORT 8080                                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] WORKDIR /usr/src/app                         
+[36mINFO[0m[0000] cmd: workdir                                 
+[36mINFO[0m[0000] Changed working directory to /usr/src/app    
+[36mINFO[0m[0000] Creating directory /usr/src/app              
+[36mINFO[0m[0000] Taking snapshot of files...                  
+[36mINFO[0m[0000] Using files from context: [/workspace/source] 
+[36mINFO[0m[0000] COPY . .                                     
+[36mINFO[0m[0000] Taking snapshot of files...                  
+[36mINFO[0m[0000] CMD ["npm", "start"]                         
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+2020/02/15 13:22:36 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/02/15 13:22:36 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/02/15 13:22:36 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/02/15 13:22:36 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/02/15 13:22:36 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/02/15 13:22:36 pushed blob: sha256:f98833a31d11195b1ef9af578a525ee4f4e62e387068c0f3408b7c6e2ff7ba79
+2020/02/15 13:22:36 pushed blob: sha256:ffcf8ff67858f174bf8ee4e74b071289f0774d758d7cb4f2d2f7e7dacb1b870c
+2020/02/15 13:22:36 pushed blob: sha256:07df16f2b71d76f6d78399a99bb18ae9bfc6b953fe5850129d004714c4cee53d
+2020/02/15 13:22:36 296178596335.dkr.ecr.us-east-1.amazonaws.com/cb-kubecd/bdd-nh-1581771917:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:167d4e4d88a7c936386765fca0be06695ddb1b9447fe42e32551637d61b21f9d size: 1404
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 296178596335.dkr.ecr.us-east-1.amazonaws.com\/cb-kubecd\/bdd-nh-1581771917|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1581771917-pr-2hwrv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Created environment cb-kubecd-bdd-nh-1581771917-pr-1
+Namespace **-cb-kubecd-bdd-nh-1581771917-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 54.85.249.76.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: 296178596335.dkr.ecr.us-east-1.amazonaws.com/cb-kubecd/bdd-nh-1581771917
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+
+Updating PipelineActivities cb-kubecd-bdd-nh-1581771917-pr-1-1 which has status 
+WARNING: preview application http://bdd-nh-1581771917.**-cb-kubecd-bdd-nh-1581771917-pr-1.54.85.249.76.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 585.520507ms
+WARNING: preview application http://bdd-nh-1581771917.**-cb-kubecd-bdd-nh-1581771917-pr-1.54.85.249.76.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.304539265s
+WARNING: preview application http://bdd-nh-1581771917.**-cb-kubecd-bdd-nh-1581771917-pr-1.54.85.249.76.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.546303728s
+Preview application is now available at: http://bdd-nh-1581771917.**-cb-kubecd-bdd-nh-1581771917-pr-1.54.85.249.76.nip.io
